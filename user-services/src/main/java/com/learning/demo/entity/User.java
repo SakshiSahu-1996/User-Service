@@ -16,21 +16,20 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private Long userId;
 	private Long phoneNumber;
 	private String email;
 	private String password;
 
 	@Enumerated(EnumType.STRING)
 	private Role role;
-	
-	
-	public Long getId() {
-		return id;
+
+	public Long getUserId() {
+		return userId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
 	public Long getPhoneNumber() {

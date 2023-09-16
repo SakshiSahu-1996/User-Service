@@ -20,7 +20,7 @@ public class Convertor {
 	
 	public UserResponse entityToResponse(User userEntity) {
 		UserResponse userResponse = new UserResponse();
-		userResponse.setId(userEntity.getId());
+		userResponse.setUserId(userEntity.getUserId());
 		userResponse.setPassword(userEntity.getPassword());
 		userResponse.setPhoneNumber(userEntity.getPhoneNumber());
 		userResponse.setRole(userEntity.getRole());
