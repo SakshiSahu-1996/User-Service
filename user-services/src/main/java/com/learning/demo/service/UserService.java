@@ -37,7 +37,6 @@ public class UserService {
 					.orElseThrow(()->new UserResponseException("user with id " + id + " not found"));
 	}
 	
-
 	public UserResponse update(Long id, UserRequest userRequest) {
 			return userRepo.findById(id).map(userEntity -> {
 				User updatedUserEntity = convertor.updateEntity(userRequest, userEntity);
@@ -46,8 +45,6 @@ public class UserService {
 			}).orElseThrow(()->new UserResponseException("user with id " + id  + " details not updated "));
 	}
 
-	
-	
 	public Status deleteUserById(Long id) {
 		Optional<User> optionalEntity = userRepo.findById(id);
 		if (optionalEntity.isPresent()) {
@@ -56,6 +53,5 @@ public class UserService {
 		}
 		return Status.FAILED;
 	}
-
 }
 
